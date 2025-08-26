@@ -1,0 +1,52 @@
+/* ======== Estilo base para el contenedor raíz ======== */
+#root {
+  max-width: 1280px;       /* Limita el ancho máximo del contenido */
+  margin: 0 auto;          /* Centra horizontalmente */
+  padding: 2rem;           /* Espaciado interno */
+  text-align: center;      /* Centra el texto */
+}
+
+/* ======== Estilos para el logo ======== */
+.logo {
+  height: 6em;             /* Altura del logo */
+  padding: 1.5em;          /* Espaciado alrededor */
+  will-change: filter;     /* Optimiza el rendimiento para cambios futuros en 'filter' */
+  transition: filter 300ms;/* Transición suave al aplicar filtro */
+}
+
+/* ======== Efecto al pasar el mouse sobre el logo ======== */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Sombra azul violeta al hacer hover */
+}
+
+/* ======== Efecto especial para el logo de React ======== */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Sombra azul clara específica de React */
+}
+
+/* ======== Animación para girar el logo ======== */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);   /* Comienza sin rotación */
+  }
+  to {
+    transform: rotate(360deg); /* Gira completamente */
+  }
+}
+
+/* ======== Aplica la animación si el usuario no prefiere reducir movimiento ======== */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear; /* Gira el logo lentamente de forma continua */
+  }
+}
+
+/* ======== Estilo para tarjetas o bloques de contenido ======== */
+.card {
+  padding: 2em;             /* Espaciado interno generoso */
+}
+
+/* ======== Estilo para texto informativo o de documentación ======== */
+.read-the-docs {
+  color: #888;              /* Gris claro para texto secundario */
+}

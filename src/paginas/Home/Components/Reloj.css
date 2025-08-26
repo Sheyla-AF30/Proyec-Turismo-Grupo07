@@ -1,0 +1,12 @@
+/* ======== Barra del reloj ======== */
+.reloj-bar {
+  display: flex;                         /* Usa Flexbox para alinear elementos horizontalmente */
+  justify-content: space-between;       /* Distribuye los elementos con espacio entre ellos */
+  align-items: center;                  /* Centra verticalmente los elementos dentro de la barra */
+  max-width: 1200px;                    /* Limita el ancho máximo de la barra */
+  margin: 8px auto 0 auto;              /* Centra horizontalmente y da margen superior */
+  padding: 4px 12px;                    /* Espaciado interno: arriba/abajo 4px, izquierda/derecha 12px */
+  color: #222;                          /* Color del texto: gris oscuro para buena legibilidad */
+  font-weight: 500;                     /* Peso de fuente medio: ni muy delgado ni muy grueso */
+  font-family: system-ui, sans-serif;   /* Fuente moderna y compatible con todos los sistemas */
+}

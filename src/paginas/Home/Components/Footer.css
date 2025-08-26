@@ -1,0 +1,88 @@
+/* ======== PALETA (azules y morados claros) ======== */
+:root{
+  --morado-600:#5e35b1;
+  --morado-500:#7e57c2;
+  --azul-500:#42a5f5;
+  --azul-400:#64b5f6;
+  --azul-100:#e3f2fd;
+  --morado-100:#ede7f6;
+  --texto:#333;
+}
+
+footer {
+  background: linear-gradient(90deg, var(--morado-600), var(--azul-500));
+  color: #fff;
+  padding: 24px 20px;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Columna izquierda: info */
+h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.footer-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+/* Columna central: redes sociales */
+.footer-redes {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex: 1;
+}
+
+.footer-redes a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
+}
+
+.footer-redes a:hover {
+  background: rgba(255,255,255,0.35);
+  transform: scale(1.1);
+}
+
+/* Columna derecha: derechos de autor */
+.footer-copy p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: right;
+  color: #ccc;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  .footer-contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .footer-copy p {
+    text-align: center;
+  }
+}
+
+/* Reset y ajustes globales */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; padding: 0; background: #f4f6fb; }
+
+/* Asegurar header/footer full-bleed sin esquinas blancas */
+footer { border-radius: 0 !important; margin: 0; }

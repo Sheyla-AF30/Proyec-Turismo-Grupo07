@@ -1,0 +1,110 @@
+/* ======== INICIO (hero con imagen izquierda, texto derecha) ======== */
+#inicio.seccion.activa {
+  /* Aplica flex solo a la sección de inicio */
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 40px; /* Espacio entre columnas */
+  padding: 36px 20px; /* Espaciado interno */
+  background: linear-gradient(90deg, rgba(126,87,194,.08), rgba(100,181,246,.08)); /* Fondo suave con tonos morado y azul */
+  border-radius: 16px; /* Bordes redondeados */
+  box-shadow: 0 6px 18px rgba(0,0,0,.06); /* Sombra ligera para dar profundidad */
+}
+
+/* ======== Columna izquierda: logo/imagen ======== */
+.logo-inicio img {
+  max-width: 260px; /* Tamaño máximo del logo */
+  width: 100%; /* Se adapta al contenedor */
+  height: auto; /* Mantiene proporción */
+  border-radius: 14px; /* Bordes redondeados */
+  box-shadow: 0 10px 22px rgba(0,0,0,.12); /* Sombra para destacar el logo */
+  transition: transform .35s ease; /* Transición suave al hacer hover */
+}
+
+.logo-inicio img:hover {
+  transform: scale(1.03); /* Efecto de zoom al pasar el mouse */
+}
+
+/* ======== Columna derecha: texto ======== */
+.texto-inicio {
+  max-width: 560px; /* Limita el ancho del texto */
+  color: var(--texto); /* Usa el color definido en variables */
+}
+
+.texto-inicio h1 {
+  font-size: 2.2rem; /* Título grande */
+  line-height: 1.2; /* Espaciado entre líneas */
+  margin-bottom: 8px;
+  color: var(--morado-600); /* Color morado oscuro */
+  letter-spacing: .5px; /* Espaciado entre letras */
+}
+
+.texto-inicio h1 span {
+  background: linear-gradient(90deg, var(--morado-600), var(--azul-500)); /* Degradado en el texto */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Hace que el texto tome el color del fondo */
+}
+
+.texto-inicio h3 {
+  font-size: 1.25rem;
+  color: #445; /* Gris oscuro */
+  margin-bottom: 10px;
+}
+
+.texto-inicio p {
+  font-size: 1rem;
+  color: #444;
+  background: linear-gradient(90deg, rgba(237,231,246,.6), rgba(227,242,253,.6)); /* Fondo suave para el párrafo */
+  padding: 14px 16px;
+  border-left: 4px solid var(--azul-400); /* Línea decorativa a la izquierda */
+  border-radius: 10px;
+}
+
+/* ======== Video de INICIO (debajo, ancho completo) ======== */
+.video-container {
+  position: static !important; /* Anula estilos heredados */
+  width: 100% !important;
+  max-width: 1000px;
+  padding: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+  flex: 1 1 100%; /* Ocupa toda la fila en flex */
+  margin: 8px auto 0; /* Centrado con margen superior */
+}
+
+.video-inicio {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18); /* Sombra más intensa para destacar el video */
+  outline: 2px solid rgba(100,181,246,.25); /* Borde decorativo azul claro */
+}
+
+/* ======== Responsivo INICIO ======== */
+@media (max-width: 900px) {
+  #inicio {
+    gap: 26px; /* Reduce el espacio entre columnas */
+    padding: 28px 16px; /* Reduce el padding general */
+  }
+  #inicio .logo-inicio img {
+    max-width: 210px; /* Reduce el tamaño del logo */
+  }
+  #inicio .texto-inicio h1 {
+    font-size: 1.9rem; /* Reduce el tamaño del título */
+  }
+}
+
+@media (max-width: 600px) {
+  #inicio .logo-inicio img {
+    max-width: 170px; /* Aún más pequeño en móviles */
+  }
+  #inicio .texto-inicio h1 {
+    font-size: 1.6rem;
+  }
+  #inicio .texto-inicio h3 {
+    font-size: 1.05rem;
+  }
+}

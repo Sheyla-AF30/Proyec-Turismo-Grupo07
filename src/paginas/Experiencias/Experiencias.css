@@ -1,0 +1,94 @@
+/* ======== SECCIÓN EXPERIENCIAS + GALERÍA CARRUSEL ======== */
+#experiencias {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--azul-100), var(--morado-100));
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+  color: var(--texto);
+  transition: all 0.4s ease;
+}
+
+#experiencias h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--morado-600);
+  background: linear-gradient(90deg, var(--morado-500), var(--azul-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Carrusel */
+#experiencias .galeria-carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+/* Slide */
+#experiencias .carrusel-slide-experiencias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjetas individuales */
+#experiencias .galeria-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Hover */
+#experiencias .galeria-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+}
+
+/* Imágenes */
+#experiencias .galeria-item img {
+  width: 100%;   /* en lugar de 180% */
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+#experiencias .galeria-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Títulos y descripción */
+#experiencias .galeria-item h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #04335a;
+}
+
+#experiencias .galeria-item p {
+  margin-top: 10px; 
+  color: #073949;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  #experiencias .galeria-item img { height: 150px;}
+}

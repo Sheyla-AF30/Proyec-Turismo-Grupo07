@@ -1,0 +1,115 @@
+/* ======== PALETA (azules y morados claros) ======== */
+/* Variables CSS para colores reutilizables en todo el diseño */
+:root {
+  --morado-600: #5e35b1;     /* Morado oscuro */
+  --morado-500: #7e57c2;     /* Morado medio */
+  --azul-500: #42a5f5;       /* Azul medio */
+  --azul-400: #64b5f6;       /* Azul claro */
+  --azul-100: #e3f2fd;       /* Azul muy claro (fondo) */
+  --morado-100: #ede7f6;     /* Morado muy claro (fondo) */
+  --texto: #333;             /* Color de texto principal */
+}
+
+/* ======== Transiciones suaves para SPA ======== */
+/* Clase que activa una sección con animación suave */
+.seccion.activa {
+  display: block;                    /* Muestra la sección */
+  opacity: 1;                        /* Totalmente visible */
+  transform: translateY(0);         /* Sin desplazamiento vertical */
+}
+
+/* ======== Estilos del contenedor principal del formulario de contacto ======== */
+#contacto {
+  padding: 60px 20px;               /* Espaciado interno */
+  background: linear-gradient(135deg, var(--azul-100), var(--morado-100)); /* Fondo degradado */
+  border-radius: 16px;              /* Bordes redondeados */
+  box-shadow: 0 6px 18px rgba(0,0,0,.08); /* Sombra suave */
+  max-width: 700px;                 /* Ancho máximo */
+  margin: 40px auto;                /* Centrado con margen vertical */
+  color: var(--texto);              /* Color de texto */
+  transition: all 0.4s ease;        /* Transición suave para cambios */
+}
+
+/* ======== Título del formulario ======== */
+h2 {
+  text-align: center;               /* Centrado */
+  font-size: 2.2rem;                /* Tamaño grande */
+  margin-bottom: 16px;              /* Espacio inferior */
+  color: var(--morado-600);         /* Color base (se sobreescribe abajo) */
+  background: linear-gradient(90deg, var(--morado-500), var(--azul-500)); /* Degradado para texto */
+  -webkit-background-clip: text;    /* Clip para navegadores WebKit */
+  background-clip: text;            /* Clip para otros navegadores */
+  color: transparent;               /* Hace que el texto tome el color del fondo */
+}
+
+/* ======== Texto descriptivo debajo del título ======== */
+p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;                      /* Gris medio para mejor legibilidad */
+}
+
+/* ======== Contenedor del formulario ======== */
+.contacto-contenedor {
+  display: flex;
+  flex-direction: column;           /* Apila elementos verticalmente */
+  gap: 16px;                        /* Espacio entre elementos */
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15); /* Sombra más pronunciada */
+}
+
+/* ======== Estructura del formulario ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ======== Etiquetas de los campos ======== */
+label {
+  margin-bottom: 1px;
+  font-weight: bold;
+  color: var(--morado-600);         /* Morado oscuro para destacar */
+}
+
+/* ======== Campos de entrada y área de texto ======== */
+input,
+textarea {
+  padding: 12px 14px;
+  border: 1px solid rgba(100, 181, 246, 0.4); /* Borde azul claro */
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;                    /* Elimina el borde azul al hacer clic */
+  transition: all 0.3s ease;        /* Transición suave al interactuar */
+  border-color: var(--azul-400);   /* Color de borde definido por variable */
+  box-shadow: 0 4px 12px rgba(100, 181, 246, 0.25); /* Sombra azul suave */
+}
+
+/* ======== Botón de envío ======== */
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: linear-gradient(90deg, var(--morado-500), var(--azul-500)); /* Fondo degradado */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ======== Efecto al pasar el mouse sobre el botón ======== */
+button:hover {
+  transform: scale(1.05);           /* Agranda ligeramente el botón */
+  box-shadow: 0 8px 20px rgba(0,0,0,.25); /* Sombra más intensa */
+}
+
+/* ======== Estilos responsivos para pantallas pequeñas ======== */
+@media(max-width: 600px) {
+  #contacto {
+    padding: 40px 16px;             /* Reduce el padding para móviles */
+  }
+}
